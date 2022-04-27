@@ -1,0 +1,29 @@
+/* General */
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Quote  */
+.quote--block {
+    background: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.quote--block > h3 {
+    text-align: end;
+    font-style: italic;
+}
+
