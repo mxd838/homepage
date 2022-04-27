@@ -2,7 +2,6 @@
 // -- pour les fonctionnalités aléatoires, possibilité via bouton de faire un appel api pour autre aléatoire
 // - responsive
 // - fond d'écran aléatoire 
-// - citation aléatoire
 // - météo du jour et prévisions pour les jours à venir
 // - todo list
 // - liens vers sites choisis
@@ -11,7 +10,7 @@
 // Page title with current date
 document.title = `${Date().slice(0,10)}`
 
-// Motivational quote
+// Random motivational quote
 const quoteSentence = document.querySelector('.quote--block > h2')
 const quoteAuthor = document.querySelector('.quote--block > h3')
 
@@ -25,5 +24,5 @@ fetch('https://motivational-quote-api.herokuapp.com/quotes/random')
         quoteAuthor.innerText = `- ${data.person}`
     })
  
-
+// Random background image
 
