@@ -26,11 +26,13 @@ body {
 .time--block {
     grid-column: 1 / 2;
     grid-row: 1 /2;
-    background: #333;
+    /* background: #c1c1c1; */
     /* width: 200px; */
     height: 100px;
     padding: 10px;
     margin: 10px;
+    font-size: 1.4rem;
+    color:#333
 }
 
 /* Weather */
@@ -53,6 +55,7 @@ body {
     padding: 10px;
     margin: 10px;
     opacity: 0.6;
+    color:#333
 }
 
 

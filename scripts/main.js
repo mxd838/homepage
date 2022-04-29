@@ -27,7 +27,7 @@ const date = `${daysFr[today.getDay()]} ${today.getDate()} ${monthsFr[today.getM
 
 document.title = date
 
-// --- Background image ---
+// ---- Background image ----
 // set the background image according to the hour of the day
 // make it responsive
 if (today.getHours() > 5 && today.getHours() <= 12 ){
@@ -43,6 +43,19 @@ else {
     document.body.style.backgroundImage = `url('../img/night.jpg')`
 }
 
+// ---- Display time ----
+const timeDisplay = document.querySelector('.time--block')
+let hours, minutes, seconds
+
+function changeTime(){
+    const currentTime = new Date()
+    hours = currentTime.getHours()
+    minutes = currentTime.getMinutes() < 10 ? '0' + currentTime.getMinutes() : currentTime.getMinutes()
+    timeDisplay.innerText = `${hours}:${minutes}`
+}
+setInterval(changeTime, 1000)
+
+
 
 // ==== Motivational quote ====
 const quoteSentence = document.querySelector('.quote--block > h2')
@@ -50,4 +63,3 @@ const quoteAuthor = document.querySelector('.quote--block > h3')
 
 fetchQuote(quoteSentence, quoteAuthor)
  
-console.log(today.getHours())
