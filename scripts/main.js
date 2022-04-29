@@ -1,10 +1,14 @@
 // Page de démarrage du navigateur
 // -- pour les fonctionnalités aléatoires, possibilité via bouton de faire un appel api pour autre aléatoire
 // - responsive
-// - fond d'écran aléatoire (via api ou parmi une gallerie correspondant au moment de la journee)
-// - météo du jour et prévisions pour les jours à venir
-// - todo list
-// - liens vers sites choisis
+// - afficher l'heure (coin haut gauche)
+// - DONE -fond d'écran aléatoire via api ou parmi une gallerie correspondant au moment de la journee
+// - DONE - citation aléatoire (centre centre)
+// - météo du jour et prévisions pour les jours à venir (coin haut droit)
+// - todo list (panneau coulissant via menu hamburger)
+// - liens vers sites choisis (recuperer icones)
+// -> dailyhabits, todoist, spotify, gmail, protonmail, github, poleemploi, bnp, bourso
+// - DONE -ajouter favicon
 // - habitudes
 // - loader si necessaire pour les appels api
 
@@ -29,10 +33,10 @@ document.title = date
 if (today.getHours() > 5 && today.getHours() <= 12 ){
     document.body.style.backgroundImage = `url('../img/morning.jpg')`
 }
-if (today.getHours() > 12 && today.getHours() <= 18 ){
+else if (today.getHours() > 12 && today.getHours() <= 18 ){
     document.body.style.backgroundImage = `url('../img/afternoon.jpg')`
 }
-if (today.getHours() > 18 && today.getHours() <= 22 ){
+else if (today.getHours() > 18 && today.getHours() <= 22 ){
     document.body.style.backgroundImage = `url('../img/evening.jpg')`
 }
 else {
@@ -46,3 +50,4 @@ const quoteAuthor = document.querySelector('.quote--block > h3')
 
 fetchQuote(quoteSentence, quoteAuthor)
  
+console.log(today.getHours())
