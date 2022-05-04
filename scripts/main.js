@@ -45,7 +45,7 @@ else {
 // ---- Display time ----
 const timeDisplay = document.createElement('h3')
 document.querySelector('.time--block').appendChild(timeDisplay)
-let hours, minutes, seconds
+let hours, minutes
 
 function changeTime(){
     const currentTime = new Date()
@@ -74,7 +74,7 @@ const url = `https://api.openweathermap.org/data/2.5/onecall?lat=50.392854700156
 fetch(url)
     .then(response => response.json())
     .then(data => {
-        console.log(data)
+        // console.log(data)
         const weatherLocation = document.createElement('h2')
         weatherLocation.innerText = data.timezone
         weatherInfo.appendChild(weatherLocation)
@@ -93,6 +93,9 @@ fetch(url)
         weatherImg.appendChild(weatherIcon)
     })
 
+
+// Background image via API call
+// https://api.unsplash.com/
 
 
 
